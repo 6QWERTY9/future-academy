@@ -1,73 +1,65 @@
-# React + TypeScript + Vite
+# ✅ Реализовано по Feature-Sliced Design (FSD) — для практики и развития навыков
+  🚫 Это не коммерческий проект.
+  🎯 Цель — практика фронтенда на основе открытого макета с применением FSD-архитектуры, React, TypeScript и SASS.
+  📌 Дизайн взят из открытых источников — используется исключительно в образовательных целях.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## RU
 
-Currently, two official plugins are available:
+### 🎯 Цель проекта
+Этот проект создан для углублённой практики современных подходов в фронтенд-разработке:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Освоение Feature-Sliced Design (FSD) — архитектуры, основанной на принципах срезов и слоёв.
+* Построение масштабируемой, тестируемой и поддерживаемой структуры компонентов.
+* Применение TypeScript для типизации всех слоёв (слой представления, слой логики, слой данных).
+* Использование SASS для модульной, переиспользуемой и семантичной стилизации.
+* Отказ от UI-библиотек — всё стилизовано вручную.
 
-## React Compiler
+### 🛠️ Технологии
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+|:-:|:-:|
+|**Технология**|**Назначение**|
+|**React 18**| Компонентная модель UI|
+|**TypeScript**| Статическая типизация всех слоёв и интерфейсов|
+|**SASS (SCSS)**| Модульная, масштабируемая стилизация с переменными и миксинами|
+|**Vite**| Быстрый сборщик и dev-сервер|
+|**FSD Architecture**| Архитектура по принципу: срезы > слои > зависимость только вниз|
 
-## Expanding the ESLint configuration
+### 💬 Хотите помочь?
+Это проект для обучения, но я открыт к **конструктивной критике**:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* Как улучшить архитектуру?
+* Есть ли нарушения FSD?
+* Можно ли лучше типизировать слои?
+Открывайте **Issue** или **Pull Request** — я буду рад обратной связи!
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## EN
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 🎯 Project Goal
+This project is a learning exercise focused on mastering modern frontend practices using Feature-Sliced Design (FSD), React, TypeScript, and SASS.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+* Implement FSD architecture: components organized by slices (features, shared, entities) and layers (ui, model, lib, config).
+* Build a scalable, testable, and maintainable UI structure — without external UI libraries.
+* Use TypeScript to type all layers: UI components, models, services, and configs.
+* Apply SASS for modular, reusable, and semantic styling.
+* Learn to translate static designs into clean, semantic, responsive code.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 🛠️ Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+|:-:|:-:|
+|**Technology**|**Purpose**|
+|**React 18**| Component-based UI rendering|
+|**TypeScript**| Type-safe components and layers|
+|**SASS (SCSS)**| Modular, nested, maintainable styles|
+|**Vite**| Fast development server & bundler|
+|**FSD Architecture**| АFeature-Sliced Design — slices > layers > downward dependencies|
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+
+### 💬 Want to Contribute?
+This is a **learning project** — I welcome feedback!
+
+* Is the FSD structure correct?
+* Are there any dependency violations?
+* Can types be improved?
+Open an **Issue** or **Pull Request** — your input helps me grow!
+
+
