@@ -16,8 +16,8 @@
 
 ### 🛠️ Технологии
 
-|:-:|:-:|
 |**Технология**|**Назначение**|
+|:-:|:-:|
 |**React 18**| Компонентная модель UI|
 |**TypeScript**| Статическая типизация всех слоёв и интерфейсов|
 |**SASS (SCSS)**| Модульная, масштабируемая стилизация с переменными и миксинами|
@@ -45,8 +45,8 @@ This project is a learning exercise focused on mastering modern frontend practic
 
 ### 🛠️ Tech Stack
 
-|:-:|:-:|
 |**Technology**|**Purpose**|
+|:-:|:-:|
 |**React 18**| Component-based UI rendering|
 |**TypeScript**| Type-safe components and layers|
 |**SASS (SCSS)**| Modular, nested, maintainable styles|
