@@ -1,0 +1,6 @@
+@use '@styles/mixins' as *;
+
+.default_btn {
+    @include button-with-orange-bg;
+    border: none;
+}

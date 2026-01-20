@@ -1,0 +1,23 @@
+@use "./vars" as *;
+
+@mixin text-style($font-size: 14px,  $font-weight: 400, $color: $black, $line-height: 100%) {
+    font-family: $defaultFont;
+
+    font-size: $font-size;
+    font-weight: $font-weight;
+
+    color: $color;
+
+    line-height: $line-height;
+}
+
+
+@mixin button-with-orange-bg() {
+    background-color: $orange;
+    @include text-style(14px, 700, $white);
+
+    &:hover {
+        background-color: $orange-hover;
+    }
+}
+

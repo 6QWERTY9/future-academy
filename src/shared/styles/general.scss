@@ -1,4 +1,5 @@
 @use './vars' as *;
+@use './mixins' as *;
 
 
 html,
@@ -23,3 +24,22 @@ a {
 ul {
     list-style: none;
 }
+
+.button {
+    border-radius: 6px;
+    
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    @include text-style(14px, 700, $black);
+    @media (max-width: 1024px) and (min-width: 768px) {
+        width: 250px;
+        @include text-style(14px, 700, $black);
+    }
+    @media (max-width: 768px) {
+        width: 300px;
+        @include text-style(14px, 500, $black);
+    }
+}
+
+

@@ -1,0 +1,13 @@
+.social_links {
+    width: max-content;
+    height: 40px;
+
+    display: flex;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    gap: 25px;
+
+    .social_link {
+        display: inline-flex;
+    }
+}

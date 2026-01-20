@@ -1,0 +1,19 @@
+@use '@styles/mixins' as *;
+@use '@styles/vars' as *;
+
+.outline_btn {
+    border: 2px solid $dark-navy-blue;
+    transition: border 100ms ease;
+    transition: background 250ms ease-in-out;
+    &.blue:hover {
+        background: $blue;
+        border: none;
+        color: $white;
+    }
+    &.black:hover {
+        background: $black;
+        border: none;
+        color: $white;
+    }
+
+}
