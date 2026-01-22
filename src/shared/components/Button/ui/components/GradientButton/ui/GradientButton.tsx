@@ -4,7 +4,14 @@ import css from './index.module.scss';
 
 export const GradientButton: React.FC<Omit<BaseButtonProps, 'buttonType'>> = ({text, width, height, ...baseProps}) => {
   return (
-    <button className={`button ${css.gradient_btn}`} {...baseProps} style={{width, height}}>
+    <button 
+      className={`button ${css.gradient_btn}`} 
+      {...baseProps} 
+      style={{'--button-height': height || 'var(--button-height)', '--button-width': width || 'var(--button-width)'}}  
+      aria-label={text} 
+      role="button" 
+      type="button"
+      >
       {text}
     </button>
   )
