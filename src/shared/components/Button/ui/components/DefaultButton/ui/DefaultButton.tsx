@@ -6,7 +6,10 @@ export const DefaultButton: React.FC<Omit<BaseButtonProps, 'buttonType'>> = ({te
     <button 
     className={`button ${css.default_btn}`} 
     {...baseProps} 
-    style={{'--button-height': height || 'var(--button-height)', '--button-width': width || 'var(--button-width)'}}  
+    style={{
+        '--button-height': height ? `${height}` : 'var(--button-height)',
+        '--button-width': width ? `${width}` : 'var(--button-width)',
+    }}
     aria-label={text} 
     role="button" 
     type="button"

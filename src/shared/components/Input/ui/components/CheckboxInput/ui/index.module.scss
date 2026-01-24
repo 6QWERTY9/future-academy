@@ -1,0 +1,40 @@
+@use '@styles/mixins' as *;
+@use '@styles/vars' as *;
+
+.checkbox_input_wrapper {
+    gap: 10px;
+    @include text-style(16px, 200, #333333);
+    transition: background-image 0.2s ease;
+    .checkbox_input {
+        width: var(--checkbox-width);
+        height: var(--checkbox-height);
+
+        border: 2px solid #333333;
+
+        &:checked {
+            -webkit-appearance: none; /* Отключаем стандартный стиль */
+            appearance: none;
+            
+            border-radius: 12%;
+            border: 1px solid transparent; /* Ширина обводки */
+            /* Применяем градиент к обводке */
+            background-image: linear-gradient(#fff, #fff), 
+                            linear-gradient(90deg, #F7941D 0%, #27AAE1 100%);
+            outline: none;
+            cursor: pointer;
+
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            position: relative;
+
+            &::after {
+                content: url('../../../../../../../../public/FutureAcademyIcons/checbox-checked.svg');
+                
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}

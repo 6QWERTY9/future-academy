@@ -1,0 +1,46 @@
+@use '@styles/mixins' as *;
+@use '@styles/vars' as *;
+
+
+.range_input_wrapper {
+    
+    flex-direction: column;
+    gap: 8px;
+    .range_input {
+        -webkit-appearance: none; /* Убираем стандартный стиль в WebKit */
+        appearance: none;
+        width: var(--range-width);
+        height: var(--range-height);
+        
+        outline: none;
+        margin: 0;
+        cursor: pointer;
+
+        &::-webkit-slider-runnable-track {
+            background: 
+                linear-gradient(90deg, #F7941D, #27AAE1) 0% 50% / var(--fill-width) 100% no-repeat,
+                #BDBDBD 0% 50% / calc(100% - var(--fill-width)) 100% no-repeat;
+            height: var(--range-height);
+        }
+        &::-moz-range-track {
+            background: $gradient-orange-to-blue;
+            border-radius: 100px;
+            height: var(--range-height);
+        }
+
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: url('../../../../../../../../public/FutureAcademyIcons/range.svg'); /* Цвет ползунка */
+            transform: translateY(-50%);
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        
+    }
+}

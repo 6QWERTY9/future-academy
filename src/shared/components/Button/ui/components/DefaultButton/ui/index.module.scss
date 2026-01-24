@@ -3,4 +3,6 @@
 .default_btn {
     @include button-with-orange-bg;
     border: none;
+    width: var(--button-width);
+    height: var(--button-height);
 }

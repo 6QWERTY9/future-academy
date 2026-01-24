@@ -1,0 +1,49 @@
+@use '@styles/mixins' as *;
+@use '@styles/vars' as *;
+
+.radio_input_wrapper {
+    gap: 10px;
+
+    @include text-style(16px, 200, #333333);
+    .radio_input {
+        width: var(--radio-width);
+        height: var(--radio-height);
+
+        transition: background-image 0.2s ease;
+
+        border: 2px solid #333333;
+        cursor: pointer;
+    }
+    .radio_input:checked {
+        width: var(--radio-width);
+        height: var(--radio-height);
+
+        appearance: none;
+        -webkit-appearance: none;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        /* Первый градиент (белый) — для заливки внутри, 
+            Второй градиент — ваша обводка */
+        background-image: linear-gradient(#fff, #fff), 
+                            linear-gradient(90deg, #F7941D 0%, #27AAE1 100%);
+        
+        /* Важная часть: первый фон только в контенте, второй — до границ рамки */
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 60%;
+            height: 60%;
+            border-radius: 50%;
+            background: $gradient-orange-to-blue;
+            
+            
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
