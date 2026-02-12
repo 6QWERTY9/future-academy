@@ -1,0 +1,55 @@
+@use '@styles/mixins' as *;
+@use '@styles/vars' as *;
+
+.header {
+    width: 100%;
+    height: 110px;
+    &.light {
+        background: $white;
+    }
+    &.dark {
+        background: $dark-navy-blue;
+    }
+    .header_content {
+        
+        height: 100%;
+
+        display: grid;
+        
+        justify-content: space-between;
+        align-items: center;
+
+        grid-template-columns: repeat(5, min-content);
+        
+
+        .contact_us {
+            width: max-content;
+            height: max-content;
+            a {
+                &.dark {
+                    @include text-style(16px, 400, $white, 26px)
+                }
+
+                &.light {
+                    @include text-style(16px, 400, $black, 26px);
+                }
+            }
+        }
+
+        .login_wrapper {
+            
+            .login_link {
+                display: inline-flex;
+                align-items: center;
+                gap: 5px;
+                &.dark {
+                    @include text-style(16px, 400, $white, 26px)
+                }
+
+                &.light {
+                    @include text-style(16px, 400, $black, 26px);
+                }
+            }
+        }
+    }
+}

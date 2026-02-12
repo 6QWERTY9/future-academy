@@ -1,0 +1,188 @@
+@use '@styles/mixins' as *;
+@use '@styles/vars' as *;
+
+
+$orange: #F7941D;
+$blue: #27AAE1;
+$mixed: #8FA0B0; 
+
+.city_list_wrapper {
+    width: 80%;
+    height: fit-content;
+    justify-self: center;
+
+    background: $white;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px); // Немного приподнимаем вверх
+    pointer-events: none;         // Чтобы нельзя было кликнуть по скрытому меню
+    
+    // Плавность перехода
+    transition: 
+        opacity 0.3s ease, 
+        transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+        visibility 0.3s;
+
+    // Состояние ОТКРЫТО (когда есть класс .open)
+    &.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0); // Возвращаем на место
+        pointer-events: all;      // Включаем клики обратно
+    }
+
+    box-shadow:
+        // --- ЛЕВО (Оранжевый #F7941D) ---
+        -4px 0 15px rgba($orange, 0.4),
+        -4px 0 35px rgba($orange, 0.25),
+        -8px 0 60px rgba($orange, 0.1),
+
+        // --- ЦЕНТР (Плавный переход) ---
+        0 0 80px rgba($mixed, 0.2),
+
+        // --- ПРАВО (Синий #27AAE1) ---
+        4px 0 15px rgba($blue, 0.4),
+        4px 0 35px rgba($blue, 0.25),
+        8px 0 65px rgba($blue, 0.15);
+    
+    // Добавляем тонкую внутреннюю подсветку по бокам для объема
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        pointer-events: none;
+        box-shadow: 
+            inset 10px 0 20px rgba($orange, 0.08),
+            inset -10px 0 20px rgba($blue, 0.08);
+    }
+
+    .city_list_title_wrapper {
+        user-select: none;
+        display: flex;
+
+        width: 100%;
+        height: fit-content;
+        
+        padding: 25px 25px 0px 25px;
+        justify-content: space-between;
+
+        .city_list_wrapper_close_btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .city_list_wrapper_title {
+            @include text-style(24px, 400, $black)
+        }
+    }
+
+    .city_list {
+        display: grid;
+        // Создаем 5 колонок равной ширины (1fr)
+        grid-template-columns: repeat(5, 1fr); 
+        
+        // Расстояние между элементами (сетка)
+        gap: 5px 10px; // 20px между строками, 15px между колонками
+        
+        // Строки будут создаваться сами по мере необходимости
+        grid-auto-rows: min-content; 
+        justify-items: start;
+        padding: 15px 25px 15px 25px;
+        .city_option {
+            width: max-content;
+            height: max-content;
+            cursor: pointer;
+            .city_name {
+                white-space: nowrap;
+
+                @include text-style(16px, 400, #4F4F4F, 28px);
+                position: relative;
+
+                &::after {
+                    content: '';
+                    
+                    width: 100%;
+                    height: 1px;
+                    background: $dark-navy-blue;
+
+                    position: absolute;
+                    left: 0;
+                    bottom: 0px;
+                    transform: scaleX(0);
+                    transition: transform 0.2s ease;
+                }
+
+                &:hover {
+                    color: $dark-navy-blue;
+
+                    &::after {
+                        transform: scaleX(1);
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+.city_selector_wrapper {
+
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    gap: 6px;
+    justify-items: center;
+    width: 100%;
+    
+    height: max-content;
+    cursor: pointer;
+
+    .city_selector_location_icon_wrapper {
+        display: flex;
+        width: max-content;
+        height: max-content;
+    }
+
+    .selected_city_wrapper {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        user-select: none;
+        
+
+        .selected_city {
+            text-decoration: underline;
+            &.dark {
+                text-decoration-color: $white;
+            }
+        }
+    }
+
+    .city_selector_arrow_is_open_icon_wrapper {
+            
+            
+            .arrow_icon {
+                transition: transform 0.3s ease;
+                transform: rotate(0deg); // Начальное состояние для стабильной анимации
+
+                &.open {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+}
+
+.dark {
+    @include text-style(16px, 400, $white)
+}
+
+.light {
+    @include text-style(16px, 400, $black);
+}
+

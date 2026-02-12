@@ -33,7 +33,8 @@
       "@pages/*": ["./src/pages/*"],
       "@widgets/*": ["./src/widgets/*"],
       "@processes/*": ["./src/processes/*"],
-      "@styles/*": ["./src/shared/styles/*"]
+      "@styles/*": ["./src/shared/styles/*"],
+      "@assets/*": ["./src/assets/*"]
     },
   },
   "include": ["src"]

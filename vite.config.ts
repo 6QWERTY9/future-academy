@@ -1,12 +1,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import svgr from 'vite-plugin-svgr'
 import path from 'path';
 
 
 const projectRoot = path.resolve(__dirname, './');
 // https://vite.dev/config/
 export default defineConfig({
-    plugins: [react()],
+    plugins: [react(), svgr()],
 
     resolve: {
         alias: {
@@ -18,7 +19,8 @@ export default defineConfig({
             '@features': path.resolve(projectRoot, 'src/features'),
             '@entities': path.resolve(projectRoot, 'src/entities'),
             '@shared': path.resolve(projectRoot, 'src/shared'),
-            '@styles': path.resolve(projectRoot, 'src/shared/styles')
+            '@styles': path.resolve(projectRoot, 'src/shared/styles'),
+            '@assets': path.resolve(projectRoot, 'src/assets')
         },
     },
 })
