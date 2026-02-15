@@ -1,0 +1,14 @@
+.section_with_bg {
+    background-image: url('/FutureAcademyIcons/bg.webp');
+    background-size: cover; /* Или contain */
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    width: 100%; /* Или любая другая ширина */
+    aspect-ratio: 1920 / 612;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
