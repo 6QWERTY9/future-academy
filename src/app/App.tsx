@@ -1,6 +1,6 @@
 
-import { Footer } from "@shared/components/Footer"
-import { Header } from "@shared/components/Header"
+
+import { LayoutPage } from "@shared/components/LayoutPage"
 
 import { BrowserRouter } from "react-router-dom"
 
@@ -11,9 +11,9 @@ import { BrowserRouter } from "react-router-dom"
 function App() {
   return (
     <BrowserRouter>
-      <Header theme="light"/>
-
-      <Footer/>
+      <LayoutPage headerTheme="light">
+        asd
+      </LayoutPage>
     </BrowserRouter>
   )
 }
