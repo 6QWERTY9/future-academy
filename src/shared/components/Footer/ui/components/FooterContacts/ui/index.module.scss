@@ -1,0 +1,39 @@
+@use '@styles/mixins' as *;
+@use '@styles/vars' as *;
+
+.footer_contacts_wrapper {
+
+    width: max-content;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 41px;
+
+    .footer_contact_us {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        .contact_tel {
+            @include text-style(18px, 600, $white);
+        }
+        .contact_address {
+            @include text-style(15px, 300, $white)
+        }
+        .contact_email {
+            @include text-style(15px, 300, $white)
+        }
+    }
+
+    .footer_social_links {
+        height: max-content;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .footer_copyright {
+        @include text-style(12px, 300, #BDBDBD);
+    }
+}
