@@ -1,0 +1,51 @@
+@use '@styles/mixins' as *;
+@use '@styles/vars' as *;
+
+.filter_button {
+    cursor: pointer;
+    border: none;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 17px;
+
+    .filter_button_text_content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .category_name {
+            @include text-style(16px, 700, $black);
+        }
+        .age {
+            @include text-style(12px, 400, #4F4F4F);
+            margin-top: 7px;
+        }
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+
+        background: $gradient-orange-to-blue;
+        border-radius: 10px;
+
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+
+        transform: scaleX(0);
+        transform-origin: top left;
+
+        transition: transform 0.2s ease;
+    }
+    &.active {
+        
+        &::after {
+            transform: scaleX(1)
+        }
+    }
+}

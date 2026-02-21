@@ -4,6 +4,7 @@ declare module 'react' {
     interface CSSProperties {
         '--button-width'?: string;
         '--button-height'?: string;
+        '--button-border'?: string;
         '--radio-width'?: string;
         '--radio-height'?: string;
         '--checkbox-width'?: string;

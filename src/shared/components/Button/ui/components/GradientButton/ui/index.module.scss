@@ -7,8 +7,12 @@ $mixed-orange-blue: mix($orange, $blue, 50%); // ≈ #42556C (средний о�
 .gradient_btn {
     background: rgba(255, 255, 255, 0.85);
     border: none;
-    border-radius: 1em;
+    border-radius: var(--button-border);
     cursor: pointer;
+
+    width: var(--button-width);
+    height: var(--button-height);
+    padding: 20px;
 
     // ✅ СИЛЬНЫЙ BLUR ЭФФЕКТ (как раньше)
     backdrop-filter: blur(25px) saturate(190%);
@@ -16,8 +20,8 @@ $mixed-orange-blue: mix($orange, $blue, 50%); // ≈ #42556C (средний о�
 
     // ✅ СВЕЧЕНИЕ — ключевой элемент!
     box-shadow:
-        0 0 45px rgba(60, 120, 255, 0.3),  // синее свечение для градиента
-        0 0 60px rgba(0, 80, 200, 0.2);    // очень мягкое синее
+        0 0 25px rgba(60, 120, 255, 0.3),  // синее свечение для градиента
+        0 0 10px rgba(0, 80, 200, 0.2);    // очень мягкое синее
 
     // Дополнительно: тонкая граница для чёткости
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -30,31 +34,21 @@ $mixed-orange-blue: mix($orange, $blue, 50%); // ≈ #42556C (средний о�
         box-shadow:
         // Оранжевый (начало)
         0 0 10px rgba($orange, 0.6),
-        0 0 25px rgba($orange, 0.5),
+        0 0 10px rgba($orange, 0.5),
         0 0 35px rgba($orange, 0.4),
 
         // ✅ ПРАВИЛЬНО: Смешанный цвет (50/50)
         0 0 60px rgba($mixed-orange-blue, 0.5),
 
         // Синий (конец)
-        0 0 50px rgba($blue, 0.4),
-        0 0 70px rgba($blue, 0.3),
-        0 0 80px rgba($blue, 0.2);
+        0 0 25px rgba($blue, 0.4),
+        0 0 30px rgba($blue, 0.3),
+        0 0 35px rgba($blue, 0.2);
 
         // ✅ Опционально: добавим внутреннее свечение
         
     }
 
-    &:focus {
-        background: $dark-navy-blue;
-        color: $white;
 
-        outline: none; /* Убираем стандартный браузерный outline */
-        box-shadow:
-        0 0 0 rgba($orange, 0.3),
-        0 0 0 rgba($orange, 0.2),
-        0 0 0 rgba($orange, 0.1),
-        0 0 0 0 rgba(39, 170, 225, 0.5);
-        }
 }
 

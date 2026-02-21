@@ -1,9 +1,12 @@
-import { HeroSection } from "./components/heroSection/HeroSection";
+import { CourseNavSection } from "./components/CourseNavSection/CourseNavSection";
+import { HeroSection } from "./components/HeroSection/HeroSection";
 
 export default function HomePage() {
   return (
     <>
     <HeroSection/>
+    <CourseNavSection/>
+    
     </>
   )
 }
