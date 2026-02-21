@@ -44,9 +44,9 @@ export const CourseNavSection = () => {
                         ))}
                     </div>
                     <div className={css.course_nav_tags}>
-                        {activeTags.map(tags => (
+                        {activeTags.map((tags) => (
                             <Button
-                                key={`элемент секции с навигацией: ${tags.name}`}
+                                key={tags.id}
                                 text={tags.name}
                                 buttonType="gradient"
                                 width="max-content"

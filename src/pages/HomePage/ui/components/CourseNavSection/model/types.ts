@@ -17,6 +17,6 @@ export interface CategoryTagsProps {
 
 export  interface TagsProps {
     name: string;
-    onClick?: (selectedTag: string, tagId: 'kids-filter' | 'teens-filter' | 'adults-filter') => void;
+    id: string;
 }
 

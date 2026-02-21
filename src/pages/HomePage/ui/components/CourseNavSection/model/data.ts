@@ -11,45 +11,45 @@ export const categoryTagsData: CategoryTagsProps[] = [
         id: "kids-filter",
 
         tags: [
-            {name: 'Робототехника'},
-            {name: 'Создание игр'},
-            {name: 'Программирование'},
-            {name: 'Мультимедиа'},
-            {name: 'Шахматы'},
-            {name: 'Блогинг'},
-            {name: 'Создание игр'},
-            {name: 'Web-разработка'},
-            {name: 'Soft skills'},
+            {name: 'Робототехника', id: 'kids-filter-robotic'},
+            {name: 'Создание игр', id: 'kids-filter--game-creation-1'},
+            {name: 'Программирование', id: 'kids-filter-programming'},
+            {name: 'Мультимедиа', id: 'kids-filter-multimedia'},
+            {name: 'Шахматы', id: 'kids-filter-chess'},
+            {name: 'Блогинг', id: 'kids-filter-bloging'},
+            {name: 'Создание игр', id: 'kids-filter--game-creation-2'},
+            {name: 'Web-разработка', id: 'kids-filter-web-dev'},
+            {name: 'Soft skills', id: 'kids-filter-soft-skills'},
         ]
     },
     {
         id: 'teens-filter',
 
         tags: [
-            {name: 'Web-разработка'},
-            {name: 'Прикладное программирование'},
-            {name: 'Графическое моделирование'},
-            {name: 'Game Development'},
-            {name: 'Soft skills'},
-            {name: 'Разработчик мобильных приложений'},
-            {name: 'Блогинг'},
-            {name: 'Создание игр'},
-            {name: 'Программирование'},
+            {name: 'Web-разработка', id: 'teens-filter-web-dev'},
+            {name: 'Прикладное программирование', id: 'teens-filter-applied-programming'},
+            {name: 'Графическое моделирование', id: 'teens-filter-graphical-modeling'},
+            {name: 'Game Development', id: 'teens-filter-game-dev'},
+            {name: 'Soft skills', id: 'teens-filter-soft-skills'},
+            {name: 'Разработчик мобильных приложений', id: 'teens-filter-mobile-app-developer'},
+            {name: 'Блогинг', id: 'teens-filter-bloging'},
+            {name: 'Создание игр', id: 'teens-filter-game-creation'},
+            {name: 'Программирование', id: 'teens-filter-'},
         ]
     },
     {
         id: 'adults-filter',
 
         tags: [
-            {name: 'Разработчик игр на Unity'},
-            {name: 'Разработка ПО'},
-            {name: 'Графический Дизайн'},
-            {name: 'Тестировщик ПО'},
-            {name: 'Интернет Маркетинг'},
-            {name: 'Java-разработчик'},
-            {name: 'Python–разработчик'},
-            {name: 'IOS-разработчик'},
-            {name: 'Программирование'},
+            {name: 'Разработчик игр на Unity', id: 'adults-filter-unity-game-developer'},
+            {name: 'Разработка ПО', id: 'adults-filter-software-development'},
+            {name: 'Графический Дизайн', id: 'adults-filter-graphic-design'},
+            {name: 'Тестировщик ПО', id: 'adults-filter-software-tester'},
+            {name: 'Интернет Маркетинг', id: 'adults-filter-internet-marketing'},
+            {name: 'Java-разработчик', id: 'adults-filter-java-developer'},
+            {name: 'Python–разработчик', id: 'adults-filter-python-developer'},
+            {name: 'IOS-разработчик', id: 'adults-filter-ios-developer'},
+            {name: 'Программирование', id: 'adults-filter-programmin'},
         ]
     }
 ]
