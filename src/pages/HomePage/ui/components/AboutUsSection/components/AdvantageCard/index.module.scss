@@ -1,0 +1,36 @@
+@use '@styles/mixins' as *;
+@use '@styles/vars' as *;
+
+.advantage_card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    
+
+    width: max-content;
+    .advantage_card_value {
+        width: fit-content;
+        
+        @include text-style(86px, 700, $white);
+        letter-spacing: 9.8%;
+        background: $gradient-orange-to-blue;
+        
+
+        // Создаем саму обводку. 
+            
+        -webkit-text-stroke: 8px transparent;
+
+        
+
+        /* Магия: обрезаем фон так, чтобы он был виден 
+            ТОЛЬКО там, где есть текст (включая прозрачную обводку) */
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+    .advantage_card_label {
+        @include text-style(20px, 400, $black);
+
+        max-width: 200px;
+    }
+}

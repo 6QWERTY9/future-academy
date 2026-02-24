@@ -1,0 +1,16 @@
+.about_us_content {
+    width: 100%;
+    margin-top: 10%;
+    .about_us_content_title {
+        max-width: 500px;
+    }
+
+    .about_us_content_advantages_cards {
+        display: grid;
+        grid-template-columns: repeat(3,max-content);
+
+        column-gap: 12%;
+
+        margin-top: 3%;
+    }
+}

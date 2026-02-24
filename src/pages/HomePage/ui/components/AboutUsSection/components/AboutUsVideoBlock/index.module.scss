@@ -1,0 +1,20 @@
+@use '@styles/mixins' as *;
+@use '@styles/vars' as *;
+
+.about_us_video_block {
+    width: clamp(300px, 40.625vw, 780px);
+    height: 400px; // здесь можно задать значения max-content или auto что бы высота подстраивалась под размер плеера видео но на данный момент этого видео нет так что я задал фиксированную высоту
+    
+    border-radius: 20px;
+
+    display: grid;
+    justify-self: center;
+    justify-content: center;
+    align-content: center;
+
+    background: rgb(185, 2, 185);
+
+    span {
+        @include text-style(16px, 500, $black);
+    }
+}

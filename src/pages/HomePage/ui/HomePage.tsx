@@ -1,3 +1,4 @@
+import { AboutUsSection } from "./components/AboutUsSection/AboutUsSection";
 import { CourseNavSection } from "./components/CourseNavSection/CourseNavSection";
 import { HeroSection } from "./components/HeroSection/HeroSection";
 
@@ -6,7 +7,7 @@ export default function HomePage() {
     <>
     <HeroSection/>
     <CourseNavSection/>
-    
+    <AboutUsSection/>
     </>
   )
 }

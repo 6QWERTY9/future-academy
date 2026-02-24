@@ -1,0 +1,33 @@
+.about_us_section {
+    width: 100%;
+    margin-top: 101px;
+    .about_us_content_wrapper {
+        background: transparent;
+        position: relative;
+
+        .about_us_section_decor {
+            position: absolute;
+            z-index: -1;
+        }
+
+        .about_decor_triangle {
+            top: -11%;
+            left: 20%;
+        }
+
+        .about_decor_cross {
+            bottom: 28%;
+            right: 14%;
+        }
+
+        .about_decor_line_one {
+            bottom: 50%;
+            left: 6.2%;
+        }
+
+        .about_decor_line_two {
+            top: -8%;
+            right: 8%;
+        }
+    }
+}
