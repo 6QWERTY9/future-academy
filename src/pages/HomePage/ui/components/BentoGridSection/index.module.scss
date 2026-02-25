@@ -1,0 +1,13 @@
+
+.bento_grid_section {
+    width: 100%;
+    margin-top: 7%;
+    .bento_grid_section_content {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-auto-rows: minmax(180px, auto); 
+        gap: 20px; // Отступы между карточками
+        
+        justify-content: center;
+    }
+}

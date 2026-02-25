@@ -1,0 +1,84 @@
+@use '@styles/vars' as *;
+@use '@styles/mixins' as *;
+
+$orange: #F7941D;
+$blue:   #27AAE1;
+
+// ✅ Смешиваем цвета в равных пропорциях
+$mixed-orange-blue: mix($orange, $blue, 50%);
+.bento_grid_card {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+
+    background: var(--bento-grid-card-background);
+    grid-area: var(--bento-grid-card-grid-area);
+
+    
+    &:first-child {
+        .bento_grid_card_content {
+            justify-content: space-between; 
+            padding: 40px 60px; 
+        }
+        .bento_grid_card_text_content {
+            .title {
+                @include text-style(36px, 500, $black)
+            }
+
+            .description {
+                @include text-style(18px, 400, #333333);
+                max-width: 700px;
+                width: 100%;
+                
+            }
+        }
+    }
+    &:last-child {
+        .bento_grid_card_content {
+            justify-content: space-evenly; 
+            padding: 40px 60px; 
+        }
+    }
+    .description {
+        @include text-style(16px, 400, #333333, 120%);
+        max-width: 400px; // Гибкая ширина
+        width: 100%;
+    }
+    .title {
+        @include text-style(24px, 500, $black)
+    }
+    &:not(:first-child):not(:last-child) {
+        .bento_grid_card_text_content {
+            text-align: center;
+
+        }
+    }
+
+
+    .bento_grid_card_content {
+        display: flex;
+        flex-direction: var(--bento-grid-card-flex-direction-content);
+        align-items: center;
+        justify-content: center;
+
+
+        gap: 40px;
+
+        width: 100%;
+        height: 100%;
+
+        .date_block {
+            width: max-content;
+            display: flex;
+            flex-direction: column;
+
+            .day {
+                @include text-style(78px, 800, $black);
+            }
+            .month {
+                @include text-style(30px, 400, $black);
+            }
+        }
+    }
+    
+}

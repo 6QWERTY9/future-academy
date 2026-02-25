@@ -4,11 +4,12 @@
 .outline_btn {
     width: var(--button-width);
     height: var(--button-height);
+    background: transparent;
     border: 2px solid $dark-navy-blue;
     transition: border 100ms ease;
     transition: background 250ms ease-in-out;
     &.blue:hover {
-        background: $blue;
+        background: $dark-navy-blue;
         border: none;
         color: $white;
     }
@@ -17,5 +18,5 @@
         border: none;
         color: $white;
     }
-
+    
 }
