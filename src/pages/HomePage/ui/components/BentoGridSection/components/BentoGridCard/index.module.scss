@@ -43,6 +43,7 @@ $mixed-orange-blue: mix($orange, $blue, 50%);
         @include text-style(16px, 400, #333333, 120%);
         max-width: 400px; // Гибкая ширина
         width: 100%;
+        margin-top: 2%;
     }
     .title {
         @include text-style(24px, 500, $black)
