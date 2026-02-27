@@ -1,3 +1,6 @@
+@use '@styles/mixins' as *;
+@use '@styles/vars' as *;
+
 .section_with_bg {
     background-image: url('/FutureAcademyIcons/bg.webp');
     background-size: cover; /* Или contain */
@@ -7,8 +10,11 @@
     width: 100%; /* Или любая другая ширина */
     aspect-ratio: 1920 / 612;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    margin-top: 8%;
+
+    h3 {
+        @include text-style(36px, 700, $white);
+        text-align: center;
+        padding-top: 5%;
+    }
 }

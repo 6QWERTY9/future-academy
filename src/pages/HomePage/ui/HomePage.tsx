@@ -3,6 +3,7 @@ import { AboutUsSection } from "./components/AboutUsSection/AboutUsSection";
 import { BentoGridSection } from "./components/BentoGridSection/BentoGridSection";
 import { CourseNavSection } from "./components/CourseNavSection/CourseNavSection";
 import { HeroSection } from "./components/HeroSection/HeroSection";
+import { ReviewSection } from "./components/ReviewSection/ReviewSection";
 
 export default function HomePage() {
   return (
@@ -11,7 +12,7 @@ export default function HomePage() {
     <CourseNavSection/>
     <AboutUsSection/>
     <BentoGridSection/>
-    
+    <ReviewSection/>
     </>
   )
 }

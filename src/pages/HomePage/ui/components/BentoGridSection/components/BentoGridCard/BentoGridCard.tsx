@@ -14,7 +14,7 @@ export const BentoGridCard: React.FC<BentoCardProps> = (props) => {
     // Стили для внешней обертки (Grid контейнер)
     const containerStyle = {
         ...(background && { '--bento-grid-card-background': background }),
-        ...(gridArea && { '--bento-grid-card-grid-area': gridArea }), // Исправил aria -> area
+        ...(gridArea && { '--bento-grid-card-grid-area': gridArea }), 
     }
 
     // Стили для контента (Flex контейнер)

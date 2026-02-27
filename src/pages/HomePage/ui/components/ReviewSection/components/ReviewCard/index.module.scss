@@ -1,0 +1,65 @@
+@use '@styles/mixins' as *;
+@use '@styles/vars' as *;
+
+.review_card {
+    max-width: 280px;
+
+    width: 100%;
+
+    background: $white;
+
+    border-radius: 20px;
+    cursor: pointer;
+    .review_card_content {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .author_info_wrapper {
+            display: flex;
+            text-align: start;
+            gap: 20px;
+            .author_info {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                .author_name {
+                    @include text-style(14px, 700, $black)
+                }
+
+                .author_course {
+                    max-width: 190px;
+                    @include text-style(12px, 500, #4F4F4F)
+                }
+            }
+
+            .author_img {
+                border-radius: 40px;
+            }
+        }
+
+        .review_wrapper {
+            width: 100%;
+            height: auto;
+            .review {
+                @include text-style(14px, 400, $black, 122%);
+            }
+        }
+
+        .rating_wrapper {
+            width: max-content;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 8px;
+
+            .rating {
+                @include text-style(12, 400, #4F4F4F)
+            }
+        }
+    }
+
+
+    
+}
