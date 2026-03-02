@@ -4,6 +4,7 @@ import css from './index.module.scss';
 export const DefaultButton: React.FC<Omit<BaseButtonProps, 'buttonType'>> = ({text, width, height, ...baseProps}) => {
   return (
     <button 
+    
     className={`button ${css.default_btn}`} 
     {...baseProps} 
     style={{
@@ -12,7 +13,7 @@ export const DefaultButton: React.FC<Omit<BaseButtonProps, 'buttonType'>> = ({te
     }}
     aria-label={text} 
     role="button" 
-    type="button"
+    type="submit"
     >
       {text}
     </button>

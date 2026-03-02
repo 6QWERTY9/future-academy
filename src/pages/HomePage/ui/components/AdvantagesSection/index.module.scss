@@ -1,0 +1,23 @@
+@use '@styles/mixins' as *;
+
+.advatages_section {
+    margin-top: 8%;
+    width: 100%;
+    height: auto;
+
+
+
+    .advatages_section_content {
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
+        .advatages_section_title {
+            @include text-style(36px, 700, black)
+        }
+        .advantages_cards {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}

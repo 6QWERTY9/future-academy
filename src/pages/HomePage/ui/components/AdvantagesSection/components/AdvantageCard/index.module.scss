@@ -1,0 +1,24 @@
+@use "@styles/mixins" as *;
+@use '@styles/vars' as *;
+
+.advantage_card {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .advantage_card_icon_wrapper {
+        width: max-content;
+        height: max-content;
+        
+    }
+
+    .advantage_card_description {
+        max-width: 280px;
+        width: 100%;
+        @include text-style(18px, 500, $black)
+    }
+}

@@ -1,0 +1,44 @@
+@use '@styles/mixins' as *;
+@use '@styles/vars' as *;
+
+.cta_help_form_wrapper {
+    max-width: 440px;
+    width: 100%;
+    height: max-content;
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,max-content);
+
+    column-gap: 20px;
+    row-gap: 20px;
+    align-items: center;
+
+    .help_form_input_user_name {
+        width: 440px;
+        grid-column: 1/4;
+        grid-row: 1;
+    }
+    .help_form_input_user_phone {
+        grid-row: 2;
+        grid-column: 1/2;
+
+    }
+    .help_form_input_user_email {
+        grid-row: 2;
+        grid-column: 2/3;
+    }
+
+    .cta_help_form_agreement {
+        grid-row: 3;
+        grid-column: 1/2;
+
+        @include text-style(10px, 400, #4F4F4F,150%);
+        
+    }
+
+    .help_form_button {
+        grid-row: 3;
+        grid-column: 2/3;
+    }
+}
