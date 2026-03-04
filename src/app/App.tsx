@@ -1,9 +1,6 @@
 
-
-import { HomePage } from "@pages/HomePage"
-import { LayoutPage } from "@shared/components/LayoutPage"
-
-import { BrowserRouter } from "react-router-dom"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { routes } from "./router/router"
 
 
 
@@ -12,9 +9,15 @@ import { BrowserRouter } from "react-router-dom"
 function App() {
   return (
     <BrowserRouter>
-      <LayoutPage headerTheme="light">
-        <HomePage/>
-      </LayoutPage>
+      <Routes>
+        {routes.map((route, index) => (
+          <Route
+          key={index}
+          path={route.path}
+          element={route.element}
+          />
+        ))}
+      </Routes>
     </BrowserRouter>
   )
 }
