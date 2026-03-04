@@ -4,8 +4,26 @@ import { Autoplay } from "swiper/modules";
 import 'swiper/css';
 import css from './index.module.scss'
 import { ReviewCard } from "../ReviewCard/ReviewCard";
+import { useEffect, useState } from "react";
+import type { ReviewCardProps } from "../ReviewCard/model/types";
+import { getReviews } from "./api/ReviewApi";
 
 export const ReviewSlider: React.FC = () => {
+    const [reviewsData, setReviewsData] = useState<ReviewCardProps[]>([]);
+
+    useEffect(() => {
+        const load = async () => {
+            try {
+                const data = await getReviews();
+
+                setReviewsData(data.items)
+            } catch (e) {
+                console.log(e);
+            }
+        };
+
+        load();
+    }, [])
     return (
         <div className={css.review_slider}>
             <Swiper
@@ -25,14 +43,15 @@ export const ReviewSlider: React.FC = () => {
                     disableOnInteraction: false,
                 }}
             >
-                {Array.from({length: 12}).map(ind => (
-                    <SwiperSlide key={`review-slide-${ind}`}>
-                        <ReviewCard
-                            author="Имя Фамилия"
-                            authorImgSrc="/FutureAcademyIcons/author.jpg"
-                            course="WEB-разработчик"
-                            review="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat nisl at augue dapibus, id tristique lorem placerat. Curabitur pellentesque est bibendum urna facilisis varius."
-                            rating="4"
+                {reviewsData.map(data => (
+                    <SwiperSlide>
+                        <ReviewCard 
+                        key={data.id}
+                        author={data.author}
+                        
+                        course={data.course}
+                        review={data.review}
+                        rating={data.rating}
                         />
                     </SwiperSlide>
                 ))}
