@@ -1,0 +1,25 @@
+.course_nav {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .course_nav_category_btn {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .course_nav_tags {
+        
+        width: max-content;
+        min-width: 1120px;
+        display: grid;
+        grid-template-columns: repeat(5,max-content);
+        grid-template-rows: repeat(2,1fr);
+        justify-items: center;
+        justify-content: space-evenly;
+        align-items: center;
+
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+}
