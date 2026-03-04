@@ -1,0 +1,68 @@
+@use '@styles/mixins' as *;
+@use '@styles/vars' as *;
+
+.course_card_wrapper {
+    max-width: 440px;
+    
+    width: 100%;
+    
+    border-radius: 20px;
+    
+    .course_card_content {
+        padding: 27px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .course_card_pretitle, .course_card_description  {
+            @include text-style(12px, 400, #4F4F4F, 190%)
+        }
+        .course_card_title_wrapper, .course_card_study_duration_wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        .course_card_title_wrapper {
+            width: max-content;
+            
+            gap: 20px;
+            
+            .course_card_title {
+                @include text-style(18, 700, $dark-navy-blue);
+                max-width: 70%;
+            }
+        }
+        .course_card_description_wrapper {
+            max-width: 370px;
+            width: 100%;
+            
+        }
+
+        .course_card_study_duration_wrapper {
+                justify-content: space-between;
+                .course_card_study_duration {
+                    @include text-style(12px, 400,$black)
+                }
+                .course_card_discount_wrapper {
+                    max-width: 80px;
+                    max-height: 100px;
+                    width: 100%;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    background: #F11212;
+                    border-radius: 20px;
+
+                    transform: translate(40px);
+                    
+                    .course_card_discount {
+                        display: inline-block;
+                        
+
+                        @include text-style(12,500,$white)
+                    }
+                }
+        }
+    }
+}
