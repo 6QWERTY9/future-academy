@@ -8,7 +8,7 @@ export const RangeInput: React.FC<RangeInputProps> = ({id, width='300px', height
   const fillWidth = ((value - min) / (max - min)) * 100;
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = Number(e.target.value);
-    onChange?.(newValue);
+    onChange?.(newValue); // Вызываем колбэк из пропсов
   };
   
   return (
