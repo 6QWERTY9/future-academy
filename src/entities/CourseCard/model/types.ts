@@ -1,14 +1,19 @@
 export interface CourseCardProps {
-    id?: string;
-    title?: string;
-    shortDescription?: string;
-    fullDescription?: string;
-    studyDuration?: string;
+    id: string;
+    title: string;
+    shortDescription: string;
+    fullDescription: string;
+    studyDuration: number; // Лучше number для работы с ползунком
+    price: string;
+    category: 'kids' | 'teens' | 'adults';
+    
+    // Добавляем эти поля для фильтрации:
+    level: 'novice' | 'intermediate' | 'pro';
+    type: 'profession' | 'course' | 'special';
+    
     discount?: string;
-    onClick?: () => void;
-    onClose?: () => void;
-    isModalOpen?: boolean;
-    price?: string;
-    category?: string;
     background?: string;
+    isModalOpen?: boolean;
+    onOpen?: () => void;
+    onClose?: () => void;
 }

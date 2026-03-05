@@ -1,3 +1,3 @@
-import CourseCard from './CourseCard.tsx'
+import {CourseCard} from './CourseCard.tsx'
 
 export { CourseCard }

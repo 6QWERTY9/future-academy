@@ -3,12 +3,12 @@ export interface ModalProps extends React.ComponentPropsWithoutRef<'dialog'> {
     isOpen?: boolean;
     onClose?: () => void;
 
-    id?: string;
-    title?: string;
-    fullDescription?: string;
-    studyDuration?: string;
+    id: string;
+    title: string;
+    fullDescription: string;
+    studyDuration: number;
     discount?: string;
-    price?: string;
-    category?: string;
+    price: string;
+    category: string;
 }
 

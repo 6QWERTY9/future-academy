@@ -4,6 +4,7 @@ import type { ModalProps } from "../model/types"
 import css from './index.module.scss';
 import { Link } from "react-router-dom";
 import { ROUTE_PATH } from "@app/router/routesPath";
+import { getMonthWord } from "@shared/lib/getMonthWord";
 
 export const CourseCardModal: React.FC<ModalProps> = ({
     isOpen, 
@@ -58,7 +59,7 @@ export const CourseCardModal: React.FC<ModalProps> = ({
 
         <div className={css.course_card_modal_about_price_wrapper}>
           <div className={css.course_card_modal_about_price_content}>
-            <span className={css.course_card_modal_about_price_study_duration}>{studyDuration}</span>
+            <span className={css.course_card_modal_about_price_study_duration}>{studyDuration} {getMonthWord(studyDuration)}</span>
             <span className={css.course_card_modal_about_price}>{price}</span>
 
             {discount && (<span className={css.course_card_modal_about_price_discount}>{discount}</span>)}
