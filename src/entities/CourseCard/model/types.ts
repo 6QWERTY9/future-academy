@@ -6,5 +6,9 @@ export interface CourseCardProps {
     studyDuration?: string;
     discount?: string;
     onClick?: () => void;
+    onClose?: () => void;
+    isModalOpen?: boolean;
     price?: string;
+    category?: string;
+    background?: string;
 }
