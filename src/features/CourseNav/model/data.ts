@@ -9,47 +9,39 @@ export const filterButtonData: Omit<FilterButtonProps, 'isActive' | 'setIsActive
 export const categoryTagsData: CategoryTagsProps[] = [
     {
         id: "kids-filter",
-
         tags: [
-            {name: 'Робототехника', id: 'kids-filter-robotic'},
-            {name: 'Создание игр', id: 'kids-filter--game-creation-1'},
-            {name: 'Программирование', id: 'kids-filter-programming'},
-            {name: 'Мультимедиа', id: 'kids-filter-multimedia'},
-            {name: 'Шахматы', id: 'kids-filter-chess'},
-            {name: 'Блогинг', id: 'kids-filter-bloging'},
-            {name: 'Создание игр', id: 'kids-filter--game-creation-2'},
-            {name: 'Web-разработка', id: 'kids-filter-web-dev'},
-            {name: 'Soft skills', id: 'kids-filter-soft-skills'},
+        { name: "Робототехника", id: "robotic" },
+        { name: "Создание игр", id: "game-dev" },
+        { name: "Программирование", id: "programming" },
+        { name: "Мультимедиа", id: "multimedia" },
+        { name: "Шахматы", id: "chess" },
+        { name: "Блогинг", id: "blogging" },
+        { name: "Soft skills", id: "soft-skills" },
         ]
     },
     {
-        id: 'teens-filter',
-
+        id: "teens-filter",
         tags: [
-            {name: 'Web-разработка', id: 'teens-filter-web-dev'},
-            {name: 'Прикладное программирование', id: 'teens-filter-applied-programming'},
-            {name: 'Графическое моделирование', id: 'teens-filter-graphical-modeling'},
-            {name: 'Game Development', id: 'teens-filter-game-dev'},
-            {name: 'Soft skills', id: 'teens-filter-soft-skills'},
-            {name: 'Разработчик мобильных приложений', id: 'teens-filter-mobile-app-developer'},
-            {name: 'Блогинг', id: 'teens-filter-bloging'},
-            {name: 'Создание игр', id: 'teens-filter-game-creation'},
-            {name: 'Программирование', id: 'teens-filter-'},
+        { name: "Web-разработка", id: "web" },
+        { name: "Прикладное программирование", id: "applied" },
+        { name: "Графическое моделирование", id: "graphics" },
+        { name: "Game Development", id: "game-dev" },
+        { name: "Мобильные приложения", id: "mobile" },
+        { name: "Блогинг", id: "blogging" },
+        { name: "Программирование", id: "programming" },
         ]
     },
     {
-        id: 'adults-filter',
-
+        id: "adults-filter",
         tags: [
-            {name: 'Разработчик игр на Unity', id: 'adults-filter-unity-game-developer'},
-            {name: 'Разработка ПО', id: 'adults-filter-software-development'},
-            {name: 'Графический Дизайн', id: 'adults-filter-graphic-design'},
-            {name: 'Тестировщик ПО', id: 'adults-filter-software-tester'},
-            {name: 'Интернет Маркетинг', id: 'adults-filter-internet-marketing'},
-            {name: 'Java-разработчик', id: 'adults-filter-java-developer'},
-            {name: 'Python–разработчик', id: 'adults-filter-python-developer'},
-            {name: 'IOS-разработчик', id: 'adults-filter-ios-developer'},
-            {name: 'Программирование', id: 'adults-filter-programmin'},
+        { name: "Unity", id: "unity" },
+        { name: "Разработка ПО", id: "software" },
+        { name: "Графический дизайн", id: "design" },
+        { name: "Тестировщик", id: "testing" },
+        { name: "Интернет-маркетинг", id: "marketing" },
+        { name: "Java-разработчик", id: "java" },
+        { name: "Python-разработчик", id: "python" },
+        { name: "iOS-разработчик", id: "ios" },
         ]
     }
-]
+];

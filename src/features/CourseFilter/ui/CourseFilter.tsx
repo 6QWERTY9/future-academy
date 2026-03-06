@@ -15,7 +15,7 @@ export const CourseFilter = () => {
     const newParams = new URLSearchParams(searchParams);
 
     // 2. Если значение пустое или all , удаляем ключи из url
-    if (!value || value == 'all' ) {
+    if (!value || value == 'any' ) {
       newParams.delete(name);
     } else {
       // 3. Устанавливаем новое значение в url

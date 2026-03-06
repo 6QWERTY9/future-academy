@@ -1,0 +1,23 @@
+@use '@styles/mixins' as *;
+
+.courses_section {
+    width: 100%;
+    
+    margin-top: 40px;
+    margin-bottom: 40px;
+    .courses_title {
+        @include text-style(36,700,#000, 200%)
+    }
+    .courses_content {
+        
+        display: flex;
+        padding-top: 40px;
+        
+        gap: 20px;
+        .courses_cards {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+        }
+    }
+}

@@ -15,6 +15,8 @@ export const CourseCardsList = () =>  {
   const [selectedCourse, setSelectedCourse] = useState<CourseCardProps | null>(null);
 
   // 1. Получаем фильтры из url
+  const activeCategory = searchParams.get('category');
+  const activeTag = searchParams.get('tag');
   const activeLevel = searchParams.get('level');
   const activeType = searchParams.get('type');
   const activeDuration = Number(searchParams.get('duration')) || 24;
@@ -22,15 +24,18 @@ export const CourseCardsList = () =>  {
   //2. фильтруем список 
   const filteredCourses = useMemo(() => {
     return COURSES_DATA.filter((course) => {
-      const matchesLevel = !activeLevel || course.level === activeLevel;
-      const matchesType = !activeType || course.type === activeType;
+      const matchesLevel = !activeLevel || activeLevel === 'all' || course.level === activeLevel;
+      const matchesType = !activeType || activeType === 'all' || course.type === activeType;
       const matchesDuration = course.studyDuration <= activeDuration;
+      const matchesCategory = !activeCategory || activeCategory === 'all' || course.category === activeCategory;
+      const matchesTag = !activeTag || activeTag === 'all' || course.tag === activeTag;
 
-      return matchesLevel && matchesType && matchesDuration;
+      
+      return matchesLevel && matchesType && matchesDuration && matchesCategory && matchesTag;
     })
-  }, [activeLevel, activeType, activeDuration])
+  }, [activeLevel, activeType, activeDuration,activeCategory, activeTag])
 
-
+  console.log('URL Tag:', activeTag, 'First Course Tag:', filteredCourses[0]?.tag);
   return (
     <div className={css.course_cards_list}>
       {filteredCourses.map((course) => (

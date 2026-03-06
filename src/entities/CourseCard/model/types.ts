@@ -5,11 +5,12 @@ export interface CourseCardProps {
     fullDescription: string;
     studyDuration: number; // Лучше number для работы с ползунком
     price: string;
-    category: 'kids' | 'teens' | 'adults';
+    category: 'kids-filter' | 'teens-filter' | 'adults-filter';
     
     // Добавляем эти поля для фильтрации:
     level: 'novice' | 'intermediate' | 'pro';
     type: 'profession' | 'course' | 'special';
+    tag: string;
     
     discount?: string;
     background?: string;
