@@ -6,15 +6,18 @@
     display: flex;
     
     .banner {
+        width: inherit;
         background: $gradient-orange-to-blue;
         border-radius: 20px;
         position: relative;
         padding: 2px;
+        display: grid;
 
         
         &.small {
             width: 260px;
-            height: 217px;
+            height: 200px;
+            text-align: center;
 
             &::after {
                 content: '';
@@ -32,7 +35,8 @@
         &.large {
             width: 417px;
             height: 190px;
-            
+            text-align: center;
+            line-height: 150%;
             &::after {
                 content: '';
                 position: absolute;
@@ -56,9 +60,9 @@
             display: grid;
             grid-template-rows: min-content auto;
             align-content: center;
-            gap: 40px;
+            justify-content: center;
 
-            padding-left: 20px;
+            padding: 10px 0px 10px 0px;
             .banner_title, .banner_paragraph {
                 white-space: pre-line;
                 
@@ -67,6 +71,7 @@
                 @include text-style(16px, 600, $black)
             }
             .banner_paragraph {
+                max-width: max-content;
                 @include text-style(16px, 400, $black)
             }
         }
@@ -76,13 +81,13 @@
         &.small {
             width: 168px;
             height: 188px;
-            margin-top: -30px;
+            transform: translateY(-10%);
             z-index: 1;
         }
         &.large {
             width: 276px;
             height: 311px;
-            margin-right: 20px;
+            transform: translateX(-10%);
         }
     }
 }

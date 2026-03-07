@@ -1,0 +1,13 @@
+.details_benefits_section {
+    width: 100%;
+    height: min-content;
+
+    .details_benefits_section_content {
+        display: flex;
+        column-gap: 100px;
+        .benefits_items {
+            display: flex;
+            column-gap: 100px;
+        }
+    }
+}

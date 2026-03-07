@@ -1,0 +1,25 @@
+@use '@styles/mixins' as *;
+@use '@styles/vars' as *;
+
+.benefits_item {
+
+    .benefits_item_icon {
+        width: max-content;
+    }
+    .benefits_item_text_wrapper {
+        max-width: 180px;
+        .benefits_item_title {
+            @include text-style(24px,700, $black)
+        }
+        .benefits_item_description {
+            @include text-style();
+        }
+    }
+
+}
+
+.benefits_item, .benefits_item_text_wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}

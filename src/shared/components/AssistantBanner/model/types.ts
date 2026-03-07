@@ -4,6 +4,6 @@ export interface AssistantBannerProps {
 }
 
 export interface AssistantBannerTextProps {
-    title: string;
+    title?: string;
     paragraph: string;
 }

@@ -12,7 +12,7 @@ export const AssistantBanner: React.FC<AssistantBannerProps> = ({owlSize, text})
     <div className={css.assistant_banner_wrapper} style={{flexDirection: direction}}>
       <div className={clsx(css.banner, css[owlSize])}>
         <div className={css.banner_content}>
-          <h3 className={css.banner_title}>{title}</h3>
+          {title && <h3 className={css.banner_title}>{title}</h3>}
           <p className={css.banner_paragraph}>
             {paragraph}
           </p>
