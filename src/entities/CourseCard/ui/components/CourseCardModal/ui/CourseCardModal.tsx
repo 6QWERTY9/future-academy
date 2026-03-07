@@ -64,7 +64,7 @@ export const CourseCardModal: React.FC<ModalProps> = ({
 
             {discount && (<span className={css.course_card_modal_about_price_discount}>{discount}</span>)}
           </div>
-          <Link to={`/${ROUTE_PATH.COURSES}/${category}/${id}`} className={css.course_card_modal_about_price_more_details} onClick={onClose}>
+          <Link to={`${ROUTE_PATH.COURSES}/${category}/${id}`} className={css.course_card_modal_about_price_more_details} onClick={onClose}>
             Подробнее
           </Link>
         </div>

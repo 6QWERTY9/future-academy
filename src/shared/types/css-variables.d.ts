@@ -19,5 +19,8 @@ declare module 'react' {
         '--bento-grid-card-background'?: string;
         '--bento-grid-card-grid-area'?: string;
         '--bento-grid-card-flex-direction-content'?: string;
+        
+        '--details-page-stats-items-font-size'?: string;
+        '--details-page-stats-items-font-weight'?: string;
     }
 }

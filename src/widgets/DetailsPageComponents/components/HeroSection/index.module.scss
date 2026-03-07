@@ -1,0 +1,102 @@
+@use '@styles/vars' as *;
+@use '@styles/mixins' as *;
+
+.details_hero_section {
+    width: 100%;
+
+    background: $dark-navy-blue;
+
+    position: relative;
+    margin-top: 20px;
+
+    .hero_section_content {
+        display: flex;
+        justify-content: space-between;
+        .hero_section_content_text {
+            display: grid;
+            row-gap: 30px;
+            .hero_section_content_title_wrapper {
+                .hero_section_content_text_title {
+                    @include text-style(55px, 700, $white, 120%)
+                }
+                .hero_section_content_text_paragraph {
+                    @include text-style(31px, 400, $white)
+                }
+            }
+
+
+            .hero_section_content_stats {
+                display: grid;
+                grid-template-columns: max-content max-content;
+                gap: 30px;
+            }
+
+            .hero_section_content_cta {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                .hero_section_content_cta_title {
+                    @include text-style(28px, 700, $white)
+                }
+                .hero_section_content_cta_paragraph {
+                    @include text-style(16px, 300, $white)
+                }
+            }
+        }
+
+    }
+
+    
+    .hero_decor {
+        position: absolute;
+    }
+
+    .line_one_reverse {
+        transform: scaleX(-1);
+    }
+
+    .triangle_one, .triangle_two, .cross, .circle, .line_one_reverse, .line_three {
+        top: 0;
+        right: 0;
+    }
+
+    .triangle_one {
+        right: 31%;
+        top: 5%;
+    }
+
+    .triangle_two {
+        top: 10%;
+        right: 3%;
+    }
+
+    .cross {
+        right: 18%;
+        top: 33%;
+    }
+
+    .circle {
+        top: 63%;
+        right: 33%;
+    }
+
+    .line_one {
+        bottom: -5%;
+        left: 38%;
+    }
+
+    .line_one_reverse {
+        top: 78%;
+        right: 1%;
+    }
+
+    .line_two {
+        left: 5%;
+        bottom: -8%;
+    }
+
+    .line_three {
+        right: 33%;
+        top: 40%;
+    }
+}
