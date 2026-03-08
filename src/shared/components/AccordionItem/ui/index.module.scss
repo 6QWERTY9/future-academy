@@ -1,0 +1,77 @@
+@use '@styles/vars' as *;
+@use '@styles/mixins' as *;
+
+.accordion_item {
+    width: 100%;
+    height: auto;
+    
+
+    
+
+    padding: 20px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 6px;
+
+    transition: all 200ms ease;
+    box-shadow: 10px 10px 10px -5px rgba(0, 210, 255, 0.3);
+    z-index: 1;
+    
+    .accordion_item_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .question {
+            @include text-style(18, 500, #00093C)
+        }
+        .icon_wrapper {
+            width: 20px;
+            height: 20px;
+            
+            position: relative;
+            transition: transform 100ms ease;
+            &::before, &::after {
+                content: '';
+                width: 100%;
+                border: 1px solid $dark-navy-blue;
+                border-radius: 5px;
+                position: absolute;
+            }
+
+            &::before {
+                top: 45%;
+            }
+
+
+            &::after {
+                top: 45%;
+                transform: rotate(90deg);
+            }
+
+            &.open {
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    .content_wrapper {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 300ms ease-out;
+        overflow: hidden;
+
+        &.open {
+            grid-template-rows: 1fr;
+            padding-top: 20px;
+        }
+        .content {
+            min-height: 0;
+            padding: 0;
+            width: 80%;
+
+            .answer {
+                @include text-style(14,400, $black, 200%)
+            }
+        }
+    }
+}

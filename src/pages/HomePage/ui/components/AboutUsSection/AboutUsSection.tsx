@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { AboutUsContent } from "./components/AboutUsContent/AboutUsContent";
-import { AboutUsVideoBlock } from "./components/AboutUsVideoBlock/AboutUsVideoBlock";
+import { AboutUsVideoBlock } from "../../../../../shared/components/AboutUsVideoBlock/AboutUsVideoBlock";
 
 import Triangle from '@assets/hero-decor/Vector-1.svg?react';
 import Cross from '@assets/hero-decor/Vector-2.svg?react';
