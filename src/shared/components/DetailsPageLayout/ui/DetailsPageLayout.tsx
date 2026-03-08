@@ -14,7 +14,7 @@ export const DetailsPageLayout: React.FC<DetailsPageLayoutProps> = ({
   benefits,
   team,
   children,
-  faq
+  faq,
   cta
 }) => {
   return (
