@@ -1,7 +1,9 @@
-import { AccordionItem } from "@shared/components/AccordionItem"
+
 import type { AccordionItemProps } from "@shared/components/AccordionItem/model/types"
 import { LayoutPage } from "@shared/components/LayoutPage"
 import { FAQSection } from "@widgets/DetailsPageComponents/components/FAQSection/FAQSection"
+import type { TeamSectionProps } from "@widgets/DetailsPageComponents/components/TeamSection/model/types"
+import { TeamSection } from "@widgets/DetailsPageComponents/components/TeamSection/TeamSection"
 
 
 const faqItems: AccordionItemProps[] = [
@@ -23,14 +25,42 @@ const faqItems: AccordionItemProps[] = [
   },
 ]
 
+const teamSectionData: TeamSectionProps = {
+  title: 'Наши преподаватели',
+  persons: [
+    {
+      img: '/FutureAcademyIcons/person.jpg',
+      name: 'Имя Фамилия',
+      desc: 'Выпускница Гарвардского Университета. Более 10 лет играет в шахматы и участвует в турнирах.'
+    },
+    {
+      img: '/FutureAcademyIcons/person.jpg',
+      name: 'Имя Фамилия',
+      desc: 'Выпускница Гарвардского Университета. Более 10 лет играет в шахматы и участвует в турнирах.'
+    },
+    {
+      img: '/FutureAcademyIcons/person.jpg',
+      name: 'Имя Фамилия',
+      desc: 'Выпускница Гарвардского Университета. Более 10 лет играет в шахматы и участвует в турнирах.'
+    },
+    {
+      img: '/FutureAcademyIcons/person.jpg',
+      name: 'Имя Фамилия',
+      desc: 'Выпускница Гарвардского Университета. Более 10 лет играет в шахматы и участвует в турнирах.'
+    },
+  ]
+}
+
 
 
 export const DetailsPageLayout = () => {
   return (
     <LayoutPage headerTheme="light">
+      <TeamSection {...teamSectionData}/>
       <FAQSection
         items={faqItems}
       />
+
 
     </LayoutPage>
   )

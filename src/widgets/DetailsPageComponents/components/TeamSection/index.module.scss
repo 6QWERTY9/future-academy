@@ -1,0 +1,24 @@
+@use '@styles/mixins' as *;
+@use '@styles/vars' as *;
+
+
+.team_section_content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    .team_section_title_wrapper {
+        
+        
+        text-align: center;
+        .team_section_title {
+            @include text-style(36px, 700, $white)
+        }
+    }
+
+    .person_cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 20px;
+    }
+}
