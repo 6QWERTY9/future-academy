@@ -1,8 +1,35 @@
 
 .details_faq_section {
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 150px;
     .details_faq_section_content {
+        height: 100%;
         .faq_items {
-            
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
         }
+    }
+
+    .faq_decor {
+        position: absolute;
+        z-index: -1;
+    }
+
+    .circle {
+        left: 10%;
+        top: 40%;
+    }
+
+    .cross {
+        right: 9%;
+        bottom: -20%;
+    }
+
+    .triangle {
+        top: -5%;
+        right: 12%;
     }
 }
