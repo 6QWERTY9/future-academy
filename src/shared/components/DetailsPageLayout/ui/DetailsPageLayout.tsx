@@ -2,6 +2,7 @@
 import { LayoutPage } from "@shared/components/LayoutPage"
 import type { DetailsPageLayoutProps } from "../model/types"
 import { AboutUsVideoBlock } from "@shared/components/AboutUsVideoBlock/AboutUsVideoBlock"
+import { CTA } from "@shared/components/CTA"
 
 
 
@@ -15,7 +16,6 @@ export const DetailsPageLayout: React.FC<DetailsPageLayoutProps> = ({
   team,
   children,
   faq,
-  cta
 }) => {
   return (
     <LayoutPage headerTheme="light">
@@ -27,7 +27,12 @@ export const DetailsPageLayout: React.FC<DetailsPageLayoutProps> = ({
       {children}
       {team && team}
       {faq && faq}
-      {cta}
+
+      <section>
+        <div className="content_center">
+          <CTA/>
+        </div>
+      </section>
     </LayoutPage>
   )
 }

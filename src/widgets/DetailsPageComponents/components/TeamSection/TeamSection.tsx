@@ -16,8 +16,8 @@ export const TeamSection: React.FC<TeamSectionProps> = ({
                     <h2 className={css.team_section_title}>{title}</h2>
                 </div>
                 <div className={css.person_cards}>
-                    {persons.map((item, index) => (
-                        <PersonCard {...item} key={index}/>
+                    {persons.map((item) => (
+                        <PersonCard {...item} key={item.id}/>
                     ))}
                 </div>
             </div>

@@ -1,5 +1,3 @@
 export interface PersonCardProps {
-    img: string;
-    name: string;
-    desc: string;
+    id: string; name: string; photo: string; position: string
 }
