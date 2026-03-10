@@ -1,5 +1,6 @@
 import { COURSES_DATA } from "@entities/CourseCard/model/data";
 import { DetailsPageLayout } from "@shared/components/DetailsPageLayout"
+import { AboutSection } from "@widgets/DetailsCoursePageComponents/AboutSection/AboutSection";
 import { BenefitsSection } from "@widgets/DetailsPageComponents/components/BenefitsSection/BenefitsSection";
 import { FAQSection } from "@widgets/DetailsPageComponents/components/FAQSection/FAQSection";
 import { HeroSection } from "@widgets/DetailsPageComponents/components/HeroSection/HeroSection";
@@ -74,7 +75,11 @@ export const DetailsCoursePage = () => {
             }
         
         >
-            дописать 3 секции 
+            <AboutSection
+            title={courseData.title}
+            aboutDescription={courseData.aboutDescription}
+            items={courseData.features}
+            />
         </DetailsPageLayout>
     )
 }

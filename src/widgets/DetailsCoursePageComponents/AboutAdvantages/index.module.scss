@@ -1,0 +1,18 @@
+@use '@styles/mixins' as *;
+@use '@styles/vars' as *;
+
+.advatage_item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 20px;
+
+    .advatage_item_icon_wrapper {
+        max-width: max-content;
+        
+    }
+    .advatage_item_desc {
+        max-width: 160px;
+        @include text-style()
+    }
+}

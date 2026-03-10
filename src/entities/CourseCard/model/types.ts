@@ -1,3 +1,5 @@
+import type { AboutAdvantagesProps } from "@widgets/DetailsCoursePageComponents/model/types";
+
 export interface CourseCardProps {
     id: string;
     title: string;
@@ -19,6 +21,9 @@ export interface CourseCardProps {
     onClose?: () => void;
 
     fullDescription: string;
+    aboutDescription: string;
+
+    features: AboutAdvantagesProps[]
     benefits?: { id: string; icon: string; title: string; description: string }[];
     teachers?: { id: string; name: string; photo: string; position: string }[];
     faq?: { question: string; answer: string }[];

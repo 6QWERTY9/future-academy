@@ -1,0 +1,26 @@
+@use '@styles/mixins' as *;
+@use '@styles/vars' as *;
+
+.details_course_about_section {
+    margin-top: 68px;
+    .about_section_content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        .about_section_text_wrapper {
+            .about_section_title {
+                @include text-style(36px, 700,$black, 200%)
+            }
+
+            .about_section_description {
+                max-width: 75%;
+                @include text-style(18px, 400, $black, 200%)
+            }
+        }
+
+        .about_section_advantages_items {
+            display: flex;
+            column-gap: 20px;
+        }
+    }
+}
