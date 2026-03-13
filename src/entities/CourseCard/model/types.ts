@@ -1,4 +1,4 @@
-import type { AboutAdvantagesProps } from "@widgets/DetailsCoursePageComponents/model/types";
+import type { AboutAdvantagesProps, CourseGalleryProps } from "@widgets/DetailsCoursePageComponents/model/types";
 
 export interface CourseCardProps {
     id: string;
@@ -27,4 +27,5 @@ export interface CourseCardProps {
     benefits?: { id: string; icon: string; title: string; description: string }[];
     teachers?: { id: string; name: string; photo: string; position: string }[];
     faq?: { question: string; answer: string }[];
+    gallery: CourseGalleryProps;
 }

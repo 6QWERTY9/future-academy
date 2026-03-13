@@ -1,6 +1,7 @@
 import { COURSES_DATA } from "@entities/CourseCard/model/data";
 import { DetailsPageLayout } from "@shared/components/DetailsPageLayout"
 import { AboutSection } from "@widgets/DetailsCoursePageComponents/AboutSection/AboutSection";
+import { CourseGallery } from "@widgets/DetailsCoursePageComponents/CourseGallery/CourseGallery";
 import { CoursePromoBanner } from "@widgets/DetailsCoursePageComponents/CoursePromoBanner/CoursePromoBanner";
 import { BenefitsSection } from "@widgets/DetailsPageComponents/components/BenefitsSection/BenefitsSection";
 import { FAQSection } from "@widgets/DetailsPageComponents/components/FAQSection/FAQSection";
@@ -77,15 +78,18 @@ export const DetailsCoursePage = () => {
         
         >
             <AboutSection
-            title={courseData.title}
-            aboutDescription={courseData.aboutDescription}
-            items={courseData.features}
+                title={courseData.title}
+                aboutDescription={courseData.aboutDescription}
+                items={courseData.features}
             />
             <CoursePromoBanner
-            text={[
-                'Шахматы могут помочь вам планировать наперед, не торопиться с решениями и взвешивать их плюсы и минусы.',
-                'Шахматами можно наслаждаться в любом возрасте — в результате, тренировка мозга может укреплять ваше здоровье.'
-            ]}
+                text={[
+                    'Шахматы могут помочь вам планировать наперед, не торопиться с решениями и взвешивать их плюсы и минусы.',
+                    'Шахматами можно наслаждаться в любом возрасте — в результате, тренировка мозга может укреплять ваше здоровье.'
+                ]}
+            />
+            <CourseGallery
+                {...courseData.gallery}
             />
         </DetailsPageLayout>
     )

@@ -13,3 +13,9 @@ export interface AboutSectionProps {
 export interface CoursePromoBannerProps {
     text: string[]
 }
+
+export interface CourseGalleryProps {
+    title: string;
+    desc: string;
+    images: string[]
+}
