@@ -9,3 +9,7 @@ export interface AboutSectionProps {
     aboutDescription: string;
     items: AboutAdvantagesProps[]
 }
+
+export interface CoursePromoBannerProps {
+    text: string[]
+}
