@@ -20,7 +20,7 @@
     .label, .value {
         font-size: var(--details-page-stats-items-font-size);
         font-weight: var(--details-page-stats-items-font-weight);
-        color: $white;
+        color: var(--details-pages-stats-items-color);
         font-family: $defaultFont;
     }
 }

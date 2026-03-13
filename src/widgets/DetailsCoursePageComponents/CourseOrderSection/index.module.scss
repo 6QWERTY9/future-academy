@@ -1,0 +1,72 @@
+@use '@styles/mixins' as *;
+@use '@styles/vars' as *;
+
+.course_order_section {
+    width: 100%;
+    margin-top: 5%;
+    position: relative;
+
+    .course_order_section_content {
+        min-height: 400px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 20px;
+        .header {
+            .title {
+                @include text-style(36px, 700, $black, 200%);
+            }
+            .desc {
+                @include text-style(18px, 300, $black, 200%);
+                max-width: 900px;
+            }
+        }
+
+        .stats_items {
+            max-width: 500px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+
+    }
+
+    .assistant_wrapper {
+        width: max-content;
+        height: max-content;
+        background: teal;
+    }
+
+    .order_decor {
+        position: absolute;
+        
+    }
+
+    .owl {
+        transform: scaleX(-1);
+        right: 30%;
+        top: 50%;
+    }
+
+    .triangle {
+        bottom: 0;
+        left: 40%;
+    }
+    .triangle_mirrored {
+        transform: scaleY(-1);
+        bottom: -16%;
+        right: 11%;
+    }
+
+    .circle {
+        top: -15%;
+        right: 11%;
+    }
+
+    .cross {
+        top: -15%;
+        right: 30%;
+    }
+}

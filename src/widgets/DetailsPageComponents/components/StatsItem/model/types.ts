@@ -3,4 +3,5 @@ export interface StatsItemProps {
     value: string;
     fontSize?: string;
     fontWeight?: string;
+    color?: string;
 }

@@ -2,6 +2,7 @@ import { COURSES_DATA } from "@entities/CourseCard/model/data";
 import { DetailsPageLayout } from "@shared/components/DetailsPageLayout"
 import { AboutSection } from "@widgets/DetailsCoursePageComponents/AboutSection/AboutSection";
 import { CourseGallery } from "@widgets/DetailsCoursePageComponents/CourseGallery/CourseGallery";
+import { CourseOrderSection } from "@widgets/DetailsCoursePageComponents/CourseOrderSection/CourseOrderSection";
 import { CoursePromoBanner } from "@widgets/DetailsCoursePageComponents/CoursePromoBanner/CoursePromoBanner";
 import { BenefitsSection } from "@widgets/DetailsPageComponents/components/BenefitsSection/BenefitsSection";
 import { FAQSection } from "@widgets/DetailsPageComponents/components/FAQSection/FAQSection";
@@ -43,7 +44,7 @@ export const DetailsCoursePage = () => {
                             value: '2 раза в неделю по 2 академических часа',
                         },
                         {
-                            value: 'от  4 350 ₽ в месяц',
+                            value: `от  ${courseData.price} в месяц`,
                             fontSize: '28px',
                             fontWeight: '700'
                         },
@@ -90,6 +91,25 @@ export const DetailsCoursePage = () => {
             />
             <CourseGallery
                 {...courseData.gallery}
+            />
+            <CourseOrderSection
+                title={'Содержания курса'}
+                desc={courseData.fullDescription}
+                stats={[
+                    {
+                        label: 'Срок обучения',
+                        value: '5 лет',
+                    },
+                    {
+                        label: 'Режим занятий',
+                        value: '2 раза в неделю по 2 академических часа',
+                    },
+                    {
+                        value: `от  ${courseData.price} в месяц`,
+                        fontSize: '28px',
+                        fontWeight: '700'
+                    },
+                ]}
             />
         </DetailsPageLayout>
     )

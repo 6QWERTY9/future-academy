@@ -36,7 +36,7 @@ export const HeroSection: React.FC<DetailsHeroSectionProps> = ({
                     
                     <div className={css.hero_section_content_stats}>
                         {stats.map((stat, index) => (
-                        <StatsItems key={index} label={stat.label} value={stat.value} />
+                        <StatsItems key={index} label={stat.label} value={stat.value} fontSize={stat.fontSize} fontWeight={stat.fontWeight} color={'#fff'} />
                         ))}
                     </div>
                     <div className={css.hero_section_content_cta}>

@@ -22,5 +22,6 @@ declare module 'react' {
         
         '--details-page-stats-items-font-size'?: string;
         '--details-page-stats-items-font-weight'?: string;
+        '--details-pages-stats-items-color'?: string;
     }
 }

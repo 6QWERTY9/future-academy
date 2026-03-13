@@ -1,3 +1,5 @@
+import type { StatsItemProps } from "@widgets/DetailsPageComponents/components/StatsItem/model/types";
+
 export interface AboutAdvantagesProps {
     id: string
     icon: React.ReactNode;
@@ -18,4 +20,10 @@ export interface CourseGalleryProps {
     title: string;
     desc: string;
     images: string[]
+}
+
+export interface CourseOrderSectionProps {
+    title: string;
+    desc: string;
+    stats: StatsItemProps[]
 }
