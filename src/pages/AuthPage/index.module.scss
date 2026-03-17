@@ -1,0 +1,25 @@
+
+
+.auth_section {
+    width: 100%;
+    
+    .auth_section_content {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 50px;
+        .tabs_wrapper {
+            max-width: 580px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .form_wrapper {
+            width: max-content;
+            
+        }
+    }
+}
