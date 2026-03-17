@@ -6,6 +6,7 @@ export default function Tabs({text, isActive, ...props}: TabsProps) {
     <button
     className={clsx(css.tab, {[css.active]: isActive})}
     aria-label={text}
+    type="button"
     {...props}
     >
       <span className={css.tabs_text}>
