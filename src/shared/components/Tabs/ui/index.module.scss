@@ -1,0 +1,36 @@
+@use '@styles/mixins' as *;
+@use '@styles/vars' as *;
+
+.tab {
+    max-width: 280px;
+    width: 100%;
+    cursor: pointer;
+
+    position: relative;
+    background: transparent;
+    border: none;
+
+    &::after {
+        content: '';
+        width: 0%;
+        height: 3px;
+
+        border-radius: 4px;
+
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+        background: $gradient-orange-to-blue;
+
+        transition: width 100ms ease-in-out;
+    }
+
+    &.active::after {
+        width: 100%;
+    }
+    .tabs_text {
+        @include text-style(16px, 700, $black, )
+    }
+
+
+}

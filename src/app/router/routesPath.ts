@@ -4,7 +4,13 @@ export const ROUTE_PATH = {
     COURSE_DETAILS: '/all-courses/:category/:courseId', 
     EVENTS: '/events',
     KNOWLEDGEBASES: '/knowledge-bases',
-    CAREERS: '/careers'
+    CAREERS: '/careers',
+    AUTH: '/auth/:types'
 } as const;
+
+export const AUTH_TYPES = {
+    LOGIN: 'login',
+    REGISTRATION: 'registration'
+}
 
 export type RoutePath = typeof ROUTE_PATH[keyof typeof ROUTE_PATH];

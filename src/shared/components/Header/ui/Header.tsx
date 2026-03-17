@@ -68,7 +68,7 @@ export default function Header({theme}: {theme: 'dark' | 'light'}) {
           </a>
         </div>
         <div className={css.login_wrapper}>
-          <Link to={'/login'} className={clsx(css.login_link, css[theme])}>
+          <Link to={'/auth'} className={clsx(css.login_link, css[theme])}>
             <LoginIcon/>
             Войти
           </Link>
