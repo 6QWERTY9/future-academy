@@ -8,6 +8,7 @@ import { Tab } from "@shared/components/Tab";
 import { useNavigate, useParams } from "react-router-dom"
 import css from './index.module.scss'
 import clsx from "clsx";
+import { AssistantBanner } from "@shared/components/AssistantBanner";
 
 export const AuthPage = () => {
     
@@ -27,7 +28,9 @@ export const AuthPage = () => {
                         <Tab id="login" text="Вход" isActive={types === AUTH_TYPES.LOGIN} onClick={() => navigate(`/auth/${AUTH_TYPES.LOGIN}`)}/>
                         <Tab id="registration" text="Регистрация" isActive={types === AUTH_TYPES.REGISTRATION} onClick={() => navigate(`/auth/${AUTH_TYPES.REGISTRATION}`)}/>
                     </div>
-
+                    <div className={css.assistant_wrapper}>
+                            <AssistantBanner owlSize="small" text={{paragraph: 'Войдите в систему или зарегистрируйтесь, если у вас ещё нет аккаунта'}}/>
+                    </div>
                     <div className={css.form_wrapper}>
                         {types === AUTH_TYPES.LOGIN ? <LoginForm/> : <RegistrationForm/>}
                     </div>

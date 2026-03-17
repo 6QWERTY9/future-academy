@@ -22,14 +22,14 @@
 
         position: absolute;
         left: 0;
-        bottom: -15px;
+        bottom: -2px;
         background: $gradient-orange-to-blue;
 
         transition: width 200ms ease-in-out;
     }
 
     &.active::after {
-        width: 100%;
+        width: 108%;
     }
     .tabs_text {
         @include text-style(16px, 700, $black, )
